@@ -1,0 +1,68 @@
+/* ============================================================
+   SE Havacılık ve Makina — Spacing, Radius, Shadow, Layout
+   4px base grid. Moderate radii (the static site used 5–10px;
+   the logo's strokes have softly rounded ends). Elevation is
+   restrained and industrial; a brand-tinted hover shadow echoes
+   the original orange card glow (rgba(243,146,0,0.1)).
+   ============================================================ */
+:root {
+  /* ---- Spacing (4px base) ---- */
+  --space-0:  0;
+  --space-1:  0.25rem;  /* 4  */
+  --space-2:  0.5rem;   /* 8  */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.5rem;   /* 24 */
+  --space-6:  2rem;     /* 32 */
+  --space-7:  2.5rem;   /* 40 */
+  --space-8:  3rem;     /* 48 */
+  --space-10: 4rem;     /* 64 */
+  --space-12: 5rem;     /* 80 */
+  --space-16: 8rem;     /* 128 */
+
+  /* Section rhythm */
+  --section-y:        5rem;  /* 80 — vertical section padding */
+  --container-max:    1200px;
+  --container-pad:    2rem;
+
+  /* ---- Radii ---- */
+  --radius-xs:   3px;
+  --radius-sm:   5px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  22px;
+  --radius-pill: 999px;
+  --radius-card: var(--radius-lg);
+
+  /* ---- Borders ---- */
+  --border-w:       1px;
+  --border-w-thick: 2px; /* machine cards used a 2px brand frame */
+
+  /* ---- Shadows (cool, restrained) ---- */
+  --shadow-xs: 0 1px 2px rgba(18,22,26,0.06);
+  --shadow-sm: 0 1px 3px rgba(18,22,26,0.08), 0 1px 2px rgba(18,22,26,0.04);
+  --shadow-md: 0 5px 15px rgba(18,22,26,0.08);
+  --shadow-lg: 0 12px 28px rgba(18,22,26,0.12);
+  --shadow-xl: 0 24px 50px rgba(18,22,26,0.18);
+  /* Brand-tinted lift on hover (industrial orange glow) */
+  --shadow-brand: 0 10px 25px rgba(243,146,0,0.18);
+  --shadow-inset-top: inset 0 1px 0 rgba(255,255,255,0.06);
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast:   0.15s; /* @kind other */
+  --dur-base:   0.3s; /* @kind other */
+  --dur-slow:   0.6s; /* @kind other */
+  --lift-hover: -2px; /* @kind other */
+  --lift-card:  -6px; /* @kind other */
+
+  /* ---- Z-index ---- */
+  --z-base:    0; /* @kind other */
+  --z-sticky:  100; /* @kind other */
+  --z-header:  1000; /* @kind other */
+  --z-overlay: 1100; /* @kind other */
+  --z-modal:   1200; /* @kind other */
+  --z-toast:   1300; /* @kind other */
+}

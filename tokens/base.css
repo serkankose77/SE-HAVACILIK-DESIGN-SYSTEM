@@ -1,0 +1,89 @@
+/* ============================================================
+   SE Havacılık ve Makina — Base element styles & helpers
+   Lightweight reset + brand-aware defaults. Utility classes here
+   are convenience helpers for cards/kits, not a framework.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  font-weight: var(--fw-bold);
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--text-link); text-decoration: none; transition: color var(--dur-fast) var(--ease-out); }
+a:hover { color: var(--se-orange-700); }
+
+/* ---- Technical overline / kicker ---- */
+.se-overline {
+  font-family: var(--font-mono);
+  font-size: var(--overline-size);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+/* ---- Spec / measurement text ---- */
+.se-spec {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  color: var(--text-body);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Brand accent rule (the recurring 96px underline) ---- */
+.se-rule {
+  width: 64px;
+  height: 3px;
+  background: var(--se-orange-500);
+  border: 0;
+  border-radius: var(--radius-pill);
+}
+
+/* ---- Container ---- */
+.se-container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ---- Surfaces ---- */
+.se-on-dark { color: var(--text-on-dark); }
+.se-on-dark h1, .se-on-dark h2, .se-on-dark h3, .se-on-dark h4 { color: #fff; }
+
+/* ---- Precision crosshair / grid backdrop (subtle engineering texture) ---- */
+.se-grid-bg {
+  background-image:
+    linear-gradient(var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.se-blueprint-bg {
+  background-color: var(--steel-900);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

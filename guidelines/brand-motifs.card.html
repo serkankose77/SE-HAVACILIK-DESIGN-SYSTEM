@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Surface Motifs" subtitle="Light engineering grid · dark blueprint · orange edge accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-mono); }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .tile { height: 120px; border-radius: var(--radius-md); position: relative; overflow: hidden; display:flex; align-items:flex-end; }
+  .tile span { position: relative; font-size: 11px; padding: 8px 10px; letter-spacing:.04em; }
+  .a { background: var(--gray-50); background-image: linear-gradient(var(--border-subtle) 1px,transparent 1px), linear-gradient(90deg,var(--border-subtle) 1px,transparent 1px); background-size: 24px 24px; border:1px solid var(--border-subtle); }
+  .a span { color: var(--text-muted); }
+  .b { background: var(--steel-900); background-image: linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px); background-size: 28px 28px; }
+  .b span { color: var(--gray-300); }
+  .c { background: var(--steel-900); border-left: 4px solid var(--se-orange-500); }
+  .c::after { content:''; position:absolute; inset:0; background: radial-gradient(120% 100% at 0% 100%, rgba(243,146,0,0.25), transparent 60%); }
+  .c span { color: #fff; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="tile a"><span>engineering grid · light</span></div>
+    <div class="tile b"><span>blueprint grid · dark</span></div>
+    <div class="tile c"><span>orange edge + glow</span></div>
+  </div>
+</body>
+</html>

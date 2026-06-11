@@ -1,0 +1,56 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Buttons" subtitle="Primary, secondary, outline, ghost · sizes · icons · on-dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-sans); }
+  .group { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 16px; }
+  .dark { background: var(--steel-900); border-radius: var(--radius-lg); padding: 18px 20px;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size: 32px 32px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); width: 100%; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Button } = window.SEHavacLKDesignSystem_1f3d56;
+  const Arrow = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
+  const Mail = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>;
+  function Demo(){
+    return (
+      <div>
+        <div className="group">
+          <span className="lbl">Variants</span>
+          <Button variant="primary" iconRight={<Arrow/>}>Hizmetlerimizi Keşfedin</Button>
+          <Button variant="secondary">Makinelerimiz</Button>
+          <Button variant="outline">Detaylar</Button>
+          <Button variant="ghost" iconLeft={<Mail/>}>İletişim</Button>
+        </div>
+        <div className="group">
+          <span className="lbl">Sizes &amp; disabled</span>
+          <Button variant="primary" size="lg">Large</Button>
+          <Button variant="primary" size="md">Medium</Button>
+          <Button variant="primary" size="sm">Small</Button>
+          <Button variant="primary" disabled>Disabled</Button>
+        </div>
+        <div className="dark">
+          <div className="group" style={{margin:0}}>
+            <span className="lbl" style={{color:'var(--gray-500)'}}>On dark</span>
+            <Button variant="primary" iconRight={<Arrow/>}>Teklif Alın</Button>
+            <Button variant="outline" onDark>Daha Fazla</Button>
+            <Button variant="ghost" onDark>Geç</Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

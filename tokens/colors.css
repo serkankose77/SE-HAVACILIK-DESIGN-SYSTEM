@@ -1,0 +1,108 @@
+/* ============================================================
+   SE Havacılık ve Makina — Color Tokens
+   Brand identity is the logo: SE Orange (#F39200) + Charcoal Ink
+   (#1D1D1B) on white / cool light-gray. An "aerospace steel" dark
+   scale supports inverted sections. Aviation blue is a supporting
+   accent only (the production React build leaned on it).
+   ============================================================ */
+:root {
+  /* ---- Brand: SE Orange (sampled from the logo, rgb 243,146,0) ---- */
+  --se-orange-50:  #FFF4E5;
+  --se-orange-100: #FFE3C2;
+  --se-orange-200: #FFCB8A;
+  --se-orange-300: #FFB04D;
+  --se-orange-400: #FA9C1E;
+  --se-orange-500: #F39200; /* core brand mark color */
+  --se-orange-600: #E67E00; /* hover / pressed (matches static site) */
+  --se-orange-700: #C26800;
+  --se-orange-800: #964F00;
+  --se-orange-900: #6E3A00;
+
+  /* ---- Ink: logo charcoal (rgb 29,29,27) ---- */
+  --se-ink:        #1D1D1B;
+  --se-ink-soft:   #2A2A27;
+
+  /* ---- Aerospace Steel: cool slate for dark/inverted surfaces ---- */
+  --steel-950: #0E1216;
+  --steel-900: #14181D;
+  --steel-800: #1E242B;
+  --steel-700: #2A333C;
+  --steel-600: #3A4651;
+  --steel-500: #51606D;
+
+  /* ---- Neutral gray scale (cool) ---- */
+  --gray-0:   #FFFFFF;
+  --gray-50:  #F7F8FA;
+  --gray-100: #EEF1F4;
+  --gray-200: #E1E6EB;
+  --gray-300: #CCD3DB;
+  --gray-400: #9BA5AF;
+  --gray-500: #6C7782;
+  --gray-600: #4D575F;
+  --gray-700: #353D45;
+  --gray-800: #20262C;
+  --gray-900: #12161A;
+
+  /* ---- Supporting: aviation blue (accent only, not primary) ---- */
+  --blue-50:  #EAF2FB;
+  --blue-300: #7FB0E8;
+  --blue-500: #2B6CB0;
+  --blue-600: #245C97;
+
+  /* ---- Semantic ---- */
+  --green-50:  #E9F5EE;
+  --green-500: #2E8B57; /* quality "pass" check */
+  --green-600: #237045;
+  --amber-500: #F5A623; /* caution */
+  --red-50:    #FCEBEB;
+  --red-500:   #D64545;
+  --red-600:   #B53636;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in components
+     ============================================================ */
+  /* Brand */
+  --color-brand:            var(--se-orange-500);
+  --color-brand-hover:      var(--se-orange-600);
+  --color-brand-active:     var(--se-orange-700);
+  --color-brand-subtle:     var(--se-orange-50);
+  --color-brand-on:         #FFFFFF; /* text/icon on orange */
+
+  /* Text */
+  --text-strong:   var(--se-ink);
+  --text-body:     var(--gray-700);
+  --text-muted:    var(--gray-500);
+  --text-faint:    var(--gray-400);
+  --text-on-dark:  #FFFFFF;
+  --text-on-dark-muted: var(--gray-300);
+  --text-brand:    var(--se-orange-600);
+  --text-link:     var(--se-orange-600);
+
+  /* Surfaces */
+  --surface-page:     var(--gray-0);
+  --surface-subtle:   var(--gray-50);
+  --surface-muted:    var(--gray-100);
+  --surface-card:     #FFFFFF;
+  --surface-inverse:  var(--steel-900);
+  --surface-inverse-2:var(--steel-800);
+  --surface-brand:    var(--se-orange-500);
+
+  /* Borders */
+  --border-subtle:  var(--gray-200);
+  --border-default: var(--gray-300);
+  --border-strong:  var(--gray-400);
+  --border-brand:   var(--se-orange-500);
+  --border-on-dark: rgba(255,255,255,0.14);
+
+  /* Focus ring */
+  --ring-brand: rgba(243,146,0,0.45);
+
+  /* Semantic UI */
+  --color-success: var(--green-500);
+  --color-success-subtle: var(--green-50);
+  --color-warning: var(--amber-500);
+  --color-danger:  var(--red-500);
+  --color-danger-subtle: var(--red-50);
+  --color-info:    var(--blue-500);
+  --color-info-subtle: var(--blue-50);
+}

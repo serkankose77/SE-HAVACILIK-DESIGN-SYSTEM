@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Elevation & Shadow" subtitle="Restrained cool shadows + brand-tinted hover lift" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 28px 24px; background: var(--surface-page); font-family: var(--font-mono); }
+  .row { display: flex; gap: 26px; align-items: center; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .box { width: 96px; height: 64px; background: #fff; border-radius: var(--radius-md); }
+  .lbl { font-size: 11px; color: var(--text-strong); font-weight: 600; }
+  .sub { font-size: 10px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xs)"></div><div class="lbl">xs</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="lbl">sm</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-md)"></div><div class="lbl">md · card</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="lbl">lg</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xl)"></div><div class="lbl">xl</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-brand)"></div><div class="lbl" style="color:var(--se-orange-600)">brand</div><div class="sub">hover lift</div></div>
+  </div>
+</body>
+</html>

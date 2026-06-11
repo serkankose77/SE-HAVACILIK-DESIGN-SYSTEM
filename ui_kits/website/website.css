@@ -1,0 +1,118 @@
+/* ============================================================
+   SE Havacılık — Website UI kit styles (.sew- prefix)
+   Recreates the shipped marketing site: fixed orange header,
+   white hero with the full logo lockup, orange-framed machine
+   cards, quality band, contact + map, orange footer.
+   ============================================================ */
+
+.sew-page { background: var(--surface-page); min-height: 100vh; }
+
+/* ---------- Header ---------- */
+.sew-header {
+  position: sticky; top: 0; z-index: var(--z-header);
+  background: linear-gradient(135deg, var(--se-orange-500) 0%, var(--se-orange-600) 100%);
+  color: #fff; box-shadow: var(--shadow-sm);
+}
+.sew-header__inner {
+  max-width: var(--container-max); margin-inline: auto; padding: 0 var(--container-pad);
+  height: 72px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-5);
+}
+.sew-header__brand { display: flex; align-items: center; gap: 12px; cursor: pointer; background: none; border: 0; padding: 0; }
+.sew-header__brand img { height: 34px; width: auto; display: block; }
+.sew-header__brand span { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--text-lg); color: #fff; letter-spacing: 0.01em; white-space: nowrap; }
+.sew-nav { display: flex; align-items: center; gap: var(--space-5); }
+.sew-nav__link {
+  font-family: var(--font-sans); font-weight: var(--fw-medium); font-size: var(--text-sm);
+  color: rgba(255,255,255,0.92); background: none; border: 0; padding: 6px 2px; cursor: pointer;
+  border-bottom: 2px solid transparent; transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.sew-nav__link:hover { color: #fff; border-bottom-color: rgba(255,255,255,0.7); }
+.sew-nav__link--active { color: #fff; border-bottom-color: #fff; }
+.sew-lang {
+  font-family: var(--font-mono); font-size: var(--text-xs); font-weight: var(--fw-medium); letter-spacing: 0.08em;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); color: #fff;
+  padding: 7px 14px; border-radius: var(--radius-sm); cursor: pointer;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.sew-lang:hover { background: rgba(255,255,255,0.24); }
+
+/* ---------- Hero ---------- */
+.sew-hero { padding: var(--space-12) var(--container-pad) var(--space-10); text-align: center; position: relative; overflow: hidden; }
+.sew-hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--gray-100) 1px, transparent 1px), linear-gradient(90deg, var(--gray-100) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(70% 70% at 50% 40%, rgba(0,0,0,0.55), transparent 75%);
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, rgba(0,0,0,0.55), transparent 75%);
+}
+.sew-hero__inner { position: relative; max-width: 820px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.sew-hero__logo { width: min(560px, 86%); height: auto; filter: drop-shadow(0 4px 8px rgba(29,29,27,0.18)); }
+.sew-hero__title { font-size: var(--text-5xl); font-weight: var(--fw-extrabold); color: var(--se-orange-500); line-height: var(--leading-tight); margin: 0; }
+.sew-hero__sub { font-size: var(--text-xl); color: var(--text-body); max-width: 600px; margin: 0; }
+
+/* ---------- Sections ---------- */
+.sew-section { padding: var(--section-y) var(--container-pad); }
+.sew-section__inner { max-width: var(--container-max); margin-inline: auto; }
+.sew-section--subtle { background: linear-gradient(135deg, #ffffff 0%, var(--gray-50) 100%); }
+
+/* About */
+.sew-about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center; margin-top: var(--space-7); }
+.sew-about__text { display: flex; flex-direction: column; gap: var(--space-4); font-size: var(--text-lg); line-height: var(--leading-relaxed); color: var(--text-body); }
+.sew-about__panel {
+  border-radius: var(--radius-lg); padding: var(--space-6);
+  background: linear-gradient(135deg, var(--se-orange-500), var(--se-orange-600));
+  color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--space-2); min-height: 280px; text-align: center; position: relative; overflow: hidden;
+}
+.sew-about__panel::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.sew-about__panel img { position: relative; width: 220px; height: auto; opacity: 0.95; }
+.sew-about__panel strong { position: relative; font-family: var(--font-display); font-size: var(--text-xl); font-weight: var(--fw-semibold); }
+.sew-stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5); }
+.sew-stats .se-card { text-align: center; }
+.sew-stats .se-stat__value { font-size: var(--text-3xl); white-space: nowrap; }
+
+/* Machines */
+.sew-machines { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-7); }
+.sew-machine { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.sew-machine__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-2); width: 100%; }
+.sew-machine__model { font-family: var(--font-display); font-size: var(--text-lg); font-weight: var(--fw-bold); color: var(--se-orange-600); margin: 0; }
+.sew-machine__desc { font-size: var(--text-sm); color: var(--text-muted); line-height: var(--leading-relaxed); margin: 0; }
+
+/* Quality */
+.sew-quality { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-8); align-items: start; margin-top: var(--space-7); }
+.sew-quality__text { display: flex; flex-direction: column; gap: var(--space-4); font-size: var(--text-lg); line-height: var(--leading-relaxed); color: var(--text-body); }
+
+/* Contact */
+.sew-contact { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-8); align-items: start; margin-top: var(--space-7); }
+.sew-contact__info { display: flex; flex-direction: column; gap: var(--space-4); font-size: var(--text-base); color: var(--text-body); }
+.sew-contact__info h3 { font-size: var(--text-xl); color: var(--se-orange-600); margin: 0 0 var(--space-2); }
+.sew-contact__row { display: flex; align-items: flex-start; gap: 12px; }
+.sew-contact__row svg { width: 20px; height: 20px; color: var(--se-orange-500); flex: none; margin-top: 3px; }
+.sew-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.sew-map {
+  margin-top: var(--space-8); border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--border-subtle); box-shadow: var(--shadow-md);
+  background: var(--gray-100); height: 300px; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background-image: linear-gradient(var(--gray-200) 1px, transparent 1px), linear-gradient(90deg, var(--gray-200) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.sew-map__pin { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-muted); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.04em; text-align: center; }
+.sew-map__pin svg { width: 36px; height: 36px; color: var(--se-orange-500); }
+
+/* Footer */
+.sew-footer {
+  background: linear-gradient(135deg, var(--se-orange-500) 0%, var(--se-orange-600) 100%);
+  color: #fff; padding: var(--space-6) var(--container-pad); text-align: center;
+}
+.sew-footer p { margin: 0; font-size: var(--text-sm); color: rgba(255,255,255,0.95); }
+
+@media (max-width: 900px) {
+  .sew-about, .sew-quality, .sew-contact { grid-template-columns: 1fr; }
+  .sew-machines { grid-template-columns: 1fr; }
+  .sew-nav { display: none; }
+}

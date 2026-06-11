@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Semantic & Accent" subtitle="Success, warning, danger, info + aviation blue accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 22px; background: var(--surface-page); font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .chip { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .chip .top { height: 70px; }
+  .chip .bot { background: #fff; padding: 8px 10px; }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--text-strong); }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  .note { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 14px; letter-spacing:.03em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="chip"><div class="top" style="background:var(--color-success)"></div><div class="bot"><div class="name">Success</div><div class="hex">#2E8B57</div></div></div>
+    <div class="chip"><div class="top" style="background:var(--color-warning)"></div><div class="bot"><div class="name">Warning</div><div class="hex">#F5A623</div></div></div>
+    <div class="chip"><div class="top" style="background:var(--color-danger)"></div><div class="bot"><div class="name">Danger</div><div class="hex">#D64545</div></div></div>
+    <div class="chip"><div class="top" style="background:var(--color-info)"></div><div class="bot"><div class="name">Info</div><div class="hex">#2B6CB0</div></div></div>
+    <div class="chip"><div class="top" style="background:var(--blue-300)"></div><div class="bot"><div class="name">Accent</div><div class="hex">#7FB0E8</div></div></div>
+  </div>
+  <div class="note">Aviation blue is a supporting accent only — orange leads. Green check = quality "pass".</div>
+</body>
+</html>

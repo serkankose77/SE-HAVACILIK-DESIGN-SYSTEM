@@ -1,0 +1,26 @@
+<!-- @dsCard group="Website" viewport="1280x800" name="Marketing Site" subtitle="One-page site with TR/EN toggle — hero, machines, quality, contact" -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SE Havacılık & Makina — Website</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { WebsiteHome } = window.SEHavacLKDesignSystem_1f3d56;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <WebsiteHome logoSrc="../../assets/se-logo-full.png" markSrc="../../assets/se-mark-ondark.png" />
+  );
+</script>
+</body>
+</html>

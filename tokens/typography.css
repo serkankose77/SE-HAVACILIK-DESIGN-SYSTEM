@@ -1,0 +1,60 @@
+/* ============================================================
+   SE Havacılık ve Makina — Typography Tokens
+   Display/UI:  Saira  — technical, aerospace-flavored grotesque
+                whose wide engineered forms echo the logo wordmark.
+   Mono:        IBM Plex Mono — for measurements, part numbers,
+                tolerances, machine specs (±2.5μm, Ø750, 1600x700).
+   NOTE: original site shipped no brand font (Inter / Segoe UI
+   fallbacks). Saira + IBM Plex Mono are a documented substitution.
+   ============================================================ */
+:root {
+  --font-display: 'Saira', 'Saira Semi Condensed', system-ui, sans-serif;
+  --font-sans:    'Saira', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Weights */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+
+  /* Type scale (px @ 16 root) — engineered, generous display sizes */
+  --text-3xs: 0.6875rem; /* 11 — micro labels */
+  --text-2xs: 0.75rem;   /* 12 — spec captions */
+  --text-xs:  0.8125rem; /* 13 — meta / overline */
+  --text-sm:  0.875rem;  /* 14 */
+  --text-base:1rem;      /* 16 — body */
+  --text-lg:  1.125rem;  /* 18 — lead */
+  --text-xl:  1.375rem;  /* 22 */
+  --text-2xl: 1.75rem;   /* 28 */
+  --text-3xl: 2.25rem;   /* 36 */
+  --text-4xl: 3rem;      /* 48 */
+  --text-5xl: 3.75rem;   /* 60 */
+  --text-6xl: 4.75rem;   /* 76 — hero */
+
+  /* Line heights */
+  --leading-tight:   1.05;
+  --leading-snug:    1.2;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* Letter spacing — tight on display, wide on technical overlines */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.12em; /* uppercase technical labels */
+  --tracking-widest:  0.22em; /* overlines / kicker text */
+
+  /* Semantic roles */
+  --display-font:   var(--font-display);
+  --display-weight: var(--fw-bold);
+  --display-tracking: var(--tracking-tight);
+
+  --overline-font:   var(--font-mono);
+  --overline-size:   var(--text-2xs);
+  --overline-tracking: var(--tracking-wider);
+  --overline-weight: var(--fw-medium);
+
+  --spec-font: var(--font-mono); /* machine specs & measurements */
+}

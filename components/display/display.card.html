@@ -1,0 +1,59 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Display" subtitle="SectionHeading · Card · Stat · Badge" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-sans); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+  .stats { display: flex; gap: 40px; margin-top: 22px; padding: 18px 22px; background: var(--steel-900); border-radius: var(--radius-lg);
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size: 32px 32px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { SectionHeading, Card, Stat, Badge } = window.SEHavacLKDesignSystem_1f3d56;
+  const Cog = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>;
+  const Shield = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>;
+  function Demo(){
+    return (
+      <div>
+        <SectionHeading center kicker="Hizmetlerimiz" title="Comprehensive Machining"
+          sub="Havacılık endüstrisi için kapsamlı hassas işleme çözümleri." />
+        <div className="cards">
+          <Card icon={<Cog/>} title="Precision Machining" hover>
+            Havacılık parçaları için yüksek hassasiyetli işleme hizmetleri.
+          </Card>
+          <Card variant="framed" icon={<Shield/>} title="HAAS UMC750">
+            5-eksen simultane işleme · Ø750 kapasite · 24 pozisyon takım.
+          </Card>
+        </div>
+        <div className="row">
+          <Badge tone="brand">5-Axis VMC</Badge>
+          <Badge tone="success" dot>AS9100 · Pass</Badge>
+          <Badge tone="neutral">ISO 9001</Badge>
+          <Badge tone="info">CMM</Badge>
+          <Badge tone="warning" dot>Bakımda</Badge>
+          <Badge tone="solid">Yeni</Badge>
+          <Badge tone="outline">Ø750 mm</Badge>
+        </div>
+        <div className="stats">
+          <Stat value="15+" label="Yıllık Deneyim" onDark center />
+          <Stat value="±2.5 μm" label="Ölçme Hassasiyeti" onDark accent center />
+          <Stat value="24/7" label="Üretim Kapasitesi" onDark center />
+          <Stat value="100%" label="Kalite Uyumluluğu" onDark center />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

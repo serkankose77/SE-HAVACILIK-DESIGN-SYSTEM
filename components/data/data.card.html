@@ -1,0 +1,51 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Data" subtitle="SpecTable · FeatureList — machine specs & feature bullets" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { SpecTable, FeatureList } = window.SEHavacLKDesignSystem_1f3d56;
+  function Demo(){
+    return (
+      <div className="grid">
+        <div>
+          <div className="lbl">HAAS UMC750 · Teknik Özellikler</div>
+          <SpecTable specs={[
+            { key: 'X·Y·Z Travel', value: '762 × 508 × 508 mm' },
+            { key: 'Table Size', value: '500 × 400 mm' },
+            { key: 'Spindle Speed', value: '8,100 RPM' },
+            { key: 'Tool Changer', value: '24 Position' },
+            { key: 'CMM Accuracy', value: '±2.5 μm' },
+          ]} />
+        </div>
+        <div>
+          <div className="lbl">Özellikler</div>
+          <FeatureList items={[
+            'CNC 3-axis ve 5-axis işleme',
+            'Mikrometrik hassasiyet',
+            'CAD/CAM programlama',
+            'Reverse engineering',
+            'Özel fikstür tasarımı',
+            'Yüksek kaliteli yüzey bitirme',
+          ]} />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Mark & Clearspace" subtitle="Standalone aircraft mark with minimum clearspace" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-mono); display:flex; gap: 28px; align-items: center; }
+  .frame { position: relative; padding: 28px; border: 1px dashed var(--border-default); border-radius: var(--radius-md); background: var(--gray-50); }
+  .frame img { display:block; width: 240px; height: auto; }
+  .cap { position:absolute; font-size: 10px; color: var(--text-faint); letter-spacing:.1em; }
+  .cap.t { top: 6px; left: 50%; transform: translateX(-50%); }
+  .info { display:flex; flex-direction:column; gap: 10px; }
+  .info .t { font-size: 11px; color: var(--text-muted); }
+  .info .v { font-size: 13px; color: var(--text-strong); font-weight: 600; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:2px; background:var(--se-orange-500); margin-right:6px; vertical-align:-1px; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <span class="cap t">clearspace ≥ height of the “S”</span>
+    <img src="../assets/se-mark.png" alt="SE mark">
+  </div>
+  <div class="info">
+    <div><div class="t">Use when</div><div class="v">favicon · avatar · stamp</div></div>
+    <div><div class="t">Min width</div><div class="v">24px digital</div></div>
+    <div><div class="t"><span class="dot"></span>Never</div><div class="v">recolor · stretch · rotate</div></div>
+  </div>
+</body>
+</html>

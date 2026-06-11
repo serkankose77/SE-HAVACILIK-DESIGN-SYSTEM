@@ -1,0 +1,8 @@
+/* ============================================================
+   SE Havacılık ve Makina — Webfonts
+   Brand had no bundled typeface; Saira + IBM Plex Mono are the
+   documented design-system substitution, loaded from Google Fonts.
+   Replace these @import URLs with self-hosted @font-face + woff2
+   if/when licensed brand binaries are provided.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800&family=Saira+Semi+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');

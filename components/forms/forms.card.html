@@ -1,0 +1,51 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Form Fields" subtitle="Input · Select · Textarea · Checkbox — with focus, error & on-dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .dark { grid-column: 1 / -1; background: var(--steel-900); border-radius: var(--radius-lg); padding: 20px;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size: 32px 32px; }
+  .dark .grid { margin: 0; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Input, Select, Textarea, Checkbox } = window.SEHavacLKDesignSystem_1f3d56;
+  function Demo(){
+    return (
+      <div>
+        <div className="grid">
+          <Input label="Ad Soyad" required placeholder="Adınızı girin" />
+          <Input label="E-posta" required type="email" defaultValue="bad-email" error="Geçerli bir e-posta girin" />
+          <Select label="Hizmet Türü" required placeholder="Hizmet türü seçin"
+            options={['Precision Machining','Complex Geometry','Quality Control']} />
+          <Input label="Telefon" hint="İsteğe bağlı" placeholder="+90 (XXX) XXX XX XX" />
+        </div>
+        <div style={{marginTop:20}}>
+          <Textarea label="Proje Detayları" required rows={3} placeholder="Özel gereksinimlerinizi belirtin..." />
+        </div>
+        <div style={{marginTop:16}}>
+          <Checkbox label="KVKK aydınlatma metnini okudum ve onaylıyorum" defaultChecked />
+        </div>
+        <div className="dark" style={{marginTop:20}}>
+          <div className="grid">
+            <Input label="Ad Soyad" onDark placeholder="Adınız" />
+            <Select label="Hizmet Türü" onDark placeholder="Seçin" options={['Machining','CMM']} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>
