@@ -104,7 +104,7 @@ rebuild's structural ideas, and demotes its blue to a supporting accent.
 |---|---|
 | `styles.css` | Entry point — `@import`s everything below |
 | `tokens/` | `colors.css`, `typography.css`, `spacing.css`, `fonts.css`, `base.css` |
-| `assets/` | `se-logo-full.png`, `se-mark.png` + `-ondark` knockout variants |
+| `assets/` | `se-logo-full.png`, `se-mark.png` + `-ondark` knockout variants; `se-mark-round-1024.png` / `-512.png` — yuvarlak profil resmi (beyaz daire, şeffaf köşe) |
 | `components/buttons/` | **Button**, **IconButton** |
 | `components/forms/` | **Input**, **Textarea**, **Select**, **Checkbox** |
 | `components/display/` | **Badge**, **Card**, **Stat**, **SectionHeading** |
